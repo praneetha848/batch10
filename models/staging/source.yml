@@ -6,3 +6,22 @@ sources:
       tables:
         - name: raw_customerdata
         - name: raw_orders
+          columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: status 
+            tests:
+              - accepted_values:
+                  values: ['placed', 'shipped', 'completed', 'returned']  
+        - name: raw_customers
+          columns:
+            - name: id
+              tests:
+                - relationships:
+                    to: ref('customers')
+                    field: CUSTOMER_ID
+
+
+        

@@ -43,3 +43,5 @@ models:
 
     staging:
       +materialized: table
+snapshots:
+      +target_schema: snapshots
