@@ -13,6 +13,7 @@ exposures:
        - ref('orders')
        - ref('final_business')
        - ref('seed_emp_data')
+       - ref('snap_orders_check')
        - source('datafeed_shared_schema','raw_product')
        - source('datafeed_shared_schema','raw_customerdata')
        - source('datafeed_shared_schema','emp_sal')
