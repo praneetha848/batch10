@@ -4,7 +4,9 @@ sources:
       database: "{{('di_db')}}"
       schema: raw_schema
       tables:
+        - name: raw_product
         - name: raw_customerdata
+        - name: emp_sal
         - name: raw_orders
           columns:
           - name: id
